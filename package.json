@@ -2,7 +2,7 @@
   "name": "react-background-video",
   "version": "1.0.0",
   "description": "React component which provides a fullscreen background video",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel ./src -d lib",
     "lint": "eslint .",
