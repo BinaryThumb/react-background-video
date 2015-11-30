@@ -1,0 +1,5 @@
+lib
+coverage
+test/helpers
+
+karma.conf.js
