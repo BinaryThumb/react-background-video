@@ -3,13 +3,12 @@ var path = require('path');
 module.exports = function karma(config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['phantomjs-shim', 'mocha', 'chai'],
     files: [
-      './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      'test/**/*.js',
+      'test/index.js',
     ],
     preprocessors: {
-      'test/**/*.js': ['webpack', 'sourcemap'],
+      'test/index.js': ['webpack', 'sourcemap'],
     },
     webpack: {
       devtool: 'inline-source-map',
