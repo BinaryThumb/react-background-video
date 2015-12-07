@@ -11,20 +11,27 @@ module.exports = function karma(config) {
       'test/index.js': ['webpack', 'sourcemap'],
     },
     webpack: {
-      devtool: 'inline-source-map',
+      devtool: 'eval',
       module: {
-        loaders: [
-          { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-        ],
-        postLoaders: [{
+        preLoaders: [{
           test: /\.js$/,
-          exclude: /(test|node_modules)\//,
-          loader: 'istanbul-instrumenter'
+          loader: 'istanbul-instrumenter',
+          include: [
+            path.join(__dirname, 'src'),
+          ],
+        }],
+        loaders: [{
+            test: /\.js$/,
+            loader: 'babel-loader',
+            include: [
+              path.join(__dirname, 'src'),
+              path.join(__dirname, 'test'),
+            ],
         }],
       },
       resolve: {
         alias: {
-          'react-background-video': path.join(process.cwd(), 'lib'),
+          'react-background-video': path.join(process.cwd(), 'src'),
         },
       },
     },
@@ -52,7 +59,7 @@ module.exports = function karma(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: ['PhantomJS'],
-    reporters: ['progress', 'coverage'],
+    reporters: ['mocha', 'coverage'],
     captureTimeout: 60000,
     // to avoid DISCONNECTED messages
     browserDisconnectTimeout: 10000, // default 2000
