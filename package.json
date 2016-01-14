@@ -30,7 +30,7 @@
   "homepage": "https://github.com/BinaryThumb/react-background-video#readme",
   "dependencies": {
     "classnames": "^2.2.1",
-    "react": "^0.13.3"
+    "react": "^0.14.6"
   },
   "devDependencies": {
     "babel-cli": "^6.2.0",
