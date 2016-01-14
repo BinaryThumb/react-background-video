@@ -14,7 +14,7 @@ class BackgroundVideo extends Component {
     overlay: PropTypes.bool,
     poster: PropTypes.string,
     onClick: PropTypes.func,
-  }
+  };
 
   static defaultProps = {
     videos: [],
@@ -25,7 +25,7 @@ class BackgroundVideo extends Component {
     overlayClassName: '',
     videoId: 'video',
     overlay: true,
-  }
+  };
 
   render() {
     const videos = this.props.videos.map((video, index) => {
