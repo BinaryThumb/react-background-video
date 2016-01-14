@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
 class BackgroundVideo extends Component {
@@ -28,7 +28,9 @@ class BackgroundVideo extends Component {
   }
 
   render() {
-    const videos = this.props.videos.map((video, index) => <source key={index} src={video.src} type={video.type} />);
+    const videos = this.props.videos.map((video, index) => {
+      return <source key={index} src={video.src} type={video.type} />;
+    });
 
     const videoProps = {
       preload: this.props.preload,
