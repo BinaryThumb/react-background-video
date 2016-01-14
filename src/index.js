@@ -12,6 +12,8 @@ class BackgroundVideo extends Component {
     overlayClassName: PropTypes.string,
     videoId: PropTypes.string,
     overlay: PropTypes.bool,
+    poster: PropTypes.string,
+    onClick: PropTypes.func,
   }
 
   static defaultProps = {
@@ -32,6 +34,7 @@ class BackgroundVideo extends Component {
       preload: this.props.preload,
       loop: this.props.loop,
       autoPlay: this.props.autoPlay,
+      poster: this.props.poster,
     };
 
     const videoClassNames = classNames({
@@ -47,7 +50,7 @@ class BackgroundVideo extends Component {
     const overlayElement = (this.props.overlay) ? <div className={videoOverlayClassNames} /> : null;
 
     return (
-      <div className={videoClassNames}>
+      <div className={videoClassNames} onClick={this.props.onClick}>
         <video id={this.props.videoId} className="video-background" {...videoProps}>
           {videos}
         </video>
