@@ -53,6 +53,7 @@
     "karma-phantomjs-shim": "^1.1.2",
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
+    "loader-utils": "^0.2.12",
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "webpack": "^1.12.9"
