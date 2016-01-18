@@ -15,18 +15,12 @@ module.exports = function karma(config) {
       module: {
         preLoaders: [{
           test: /\.js$/,
-          loader: 'istanbul-instrumenter',
-          include: [
-            path.join(__dirname, 'src'),
-          ],
-        }],
-        loaders: [{
-            test: /\.js$/,
-            loader: 'babel-loader',
-            include: [
-              path.join(__dirname, 'src'),
-              path.join(__dirname, 'test'),
-            ],
+          loader: 'babel-istanbul-loader',
+          exclude: /(node_modules|test)/,
+        }, {
+          test: /\.js$/,
+          loader: 'babel-loader',
+          exclude: /(node_modules|src)/,
         }],
       },
       resolve: {
@@ -59,7 +53,7 @@ module.exports = function karma(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: ['PhantomJS'],
-    reporters: ['mocha', 'coverage'],
+    reporters: ['progress', 'coverage'],
     captureTimeout: 60000,
     // to avoid DISCONNECTED messages
     browserDisconnectTimeout: 10000, // default 2000
