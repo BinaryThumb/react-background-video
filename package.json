@@ -1,6 +1,6 @@
 {
   "name": "react-background-video",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React component which provides a fullscreen background video",
   "main": "lib/index.js",
   "scripts": {
