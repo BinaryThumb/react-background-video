@@ -17,3 +17,8 @@ AirBnB ES2015
 
 ## License
 MIT
+
+## Changelog
+1.2.0 Update test configuration  
+1.1.0 Add poster property and click handler  
+1.0.0 Initial release  
