@@ -27,6 +27,14 @@ class BackgroundVideo extends Component {
     overlay: true,
   };
 
+  componentWillUnmount() {
+    const videoElement = document.getElementById(this.props.videoId);
+
+    videoElement.pause();
+    videoElement.src = '';
+    videoElement.load();
+  }
+
   render() {
     const videos = this.props.videos.map((video, index) => {
       return <source key={index} src={video.src} type={video.type} />;
