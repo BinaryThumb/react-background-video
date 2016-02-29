@@ -35,8 +35,14 @@ module.exports = function karma(config) {
     },
 
     coverageReporter: {
-      type: 'lcov',
       dir: 'coverage/',
+      reporters: [{
+        type: 'html',
+        subdir: 'report-html'
+      }, {
+        type: 'lcov',
+        subdir: 'report-lcov'
+      }]
     },
 
     webpackServer: {
