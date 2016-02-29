@@ -30,9 +30,11 @@ class BackgroundVideo extends Component {
   componentWillUnmount() {
     const videoElement = document.getElementById(this.props.videoId);
 
-    videoElement.pause();
-    videoElement.src = '';
-    videoElement.load();
+    if (videoElement) {
+      videoElement.pause();
+      videoElement.src = '';
+      videoElement.load();
+    }
   }
 
   render() {
