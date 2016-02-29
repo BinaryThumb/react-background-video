@@ -3,7 +3,10 @@ import classNames from 'classnames';
 
 class BackgroundVideo extends Component {
   static propTypes = {
-    videos: PropTypes.array,
+    videos: React.PropTypes.arrayOf(PropTypes.shape({
+      src: PropTypes.string,
+      type: PropTypes.string,
+    })),
     children: PropTypes.node,
     preload: PropTypes.bool,
     loop: PropTypes.bool,
