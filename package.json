@@ -2,7 +2,8 @@
   "name": "react-background-video",
   "version": "1.2.2",
   "description": "React component which provides a fullscreen background video",
-  "main": "lib/index.js",
+  "main": "dist/react-background-video.js",
+  "jsnext:main": "dist/react-background-video.es2015.js",
   "scripts": {
     "build": "rollup-babel-lib-bundler src/index.js --module-name BackgroundVideo",
     "lint": "eslint .",
