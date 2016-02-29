@@ -23,7 +23,7 @@ class BackgroundVideo extends Component {
     autoPlay: true,
     className: '',
     overlayClassName: '',
-    videoId: 'video',
+    videoId: `video-#{Date.now()}`,
     overlay: true,
   };
 
