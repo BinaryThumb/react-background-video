@@ -8,6 +8,10 @@ describe('<BackgroundVideo />', () => {
   it('is instantiable', () => {
     const wrapper = render(<BackgroundVideo />);
     expect(wrapper).to.not.equal(null);
+    expect(() => {
+      /* eslint new-cap:0 */
+      BackgroundVideo();
+    }).to.throw(TypeError);
   });
 
   it('passes in videos', () => {

@@ -29,7 +29,7 @@ module.exports = function karma(config) {
       resolve: {
         extensions: ['', '.js', '.json'],
         alias: {
-          'react-background-video': path.join(process.cwd(), 'src'),
+          'react-background-video': path.join(process.cwd(), 'dist', 'react-background-video.js'),
         },
       },
       externals: {
