@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = function karma(config) {
   config.set({
     basePath: '',
-    frameworks: ['phantomjs-shim', 'mocha', 'chai'],
+    frameworks: ['phantomjs-shim', 'mocha', 'chai', 'sinon'],
     files: [
       'test/index.js',
     ],
@@ -32,6 +32,10 @@ module.exports = function karma(config) {
           'react-background-video': path.join(process.cwd(), 'src'),
         },
       },
+      externals: {
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+      }
     },
 
     coverageReporter: {

@@ -53,6 +53,7 @@
     "karma-mocha": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-phantomjs-shim": "^1.1.2",
+    "karma-sinon": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
     "loader-utils": "^0.2.12",
@@ -60,6 +61,7 @@
     "phantomjs": "^1.9.19",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
+    "sinon": "^1.17.3",
     "webpack": "^1.12.9"
   }
 }
