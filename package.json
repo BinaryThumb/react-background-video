@@ -29,7 +29,7 @@
   "homepage": "https://github.com/BinaryThumb/react-background-video#readme",
   "dependencies": {
     "classnames": "^2.2.1",
-    "react": "^0.14.6"
+    "react": "^0.14.7"
   },
   "devDependencies": {
     "babel-cli": "^6.2.0",
@@ -42,9 +42,11 @@
     "babel-preset-stage-1": "^6.1.18",
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
+    "enzyme": "^2.0.0",
     "eslint": "^1.10.2",
     "eslint-config-airbnb": "^3.1.0",
     "eslint-plugin-react": "^3.11.1",
+    "json-loader": "^0.5.4",
     "karma": "^0.13.15",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^0.5.3",
@@ -56,6 +58,8 @@
     "loader-utils": "^0.2.12",
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
+    "react-addons-test-utils": "^0.14.7",
+    "react-dom": "^0.14.7",
     "webpack": "^1.12.9"
   }
 }

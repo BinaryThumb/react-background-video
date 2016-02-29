@@ -14,16 +14,20 @@ module.exports = function karma(config) {
       devtool: 'eval',
       module: {
         preLoaders: [{
-          test: /\.js$/,
-          loader: 'babel-istanbul-loader',
+          test: /\.jsx?$/,
+          loader: 'babel-istanbul',
           exclude: /(node_modules|test)/,
         }, {
-          test: /\.js$/,
-          loader: 'babel-loader',
+          test: /\.jsx?$/,
+          loader: 'babel',
           exclude: /(node_modules|src)/,
+        }, {
+          test: /\.json$/,
+          loader: 'json'
         }],
       },
       resolve: {
+        extensions: ['', '.js', '.json'],
         alias: {
           'react-background-video': path.join(process.cwd(), 'src'),
         },
