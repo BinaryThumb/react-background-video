@@ -41,9 +41,8 @@ class BackgroundVideo extends Component {
   }
 
   render() {
-    const videos = this.props.videos.map((video, index) => {
-      return <source key={index} src={video.src} type={video.type} />;
-    });
+    const videos = this.props.videos.map((video, index) =>
+      <source key={index} src={video.src} type={video.type} />);
 
     const videoProps = {
       preload: this.props.preload,
